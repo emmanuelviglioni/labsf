@@ -1,7 +1,6 @@
 package com.ladesoft.roteiro01.service;
 
 import com.ladesoft.roteiro01.entity.DateTask;
-
 import com.ladesoft.roteiro01.repository.DateTaskRepository;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +18,7 @@ public class DateTaskService extends TaskDefaultService<DateTask, Integer>{
     public String createTask(DateTask p_task) throws Exception {
         if(p_task.getTaskDateEstimatedConclusion().before(new Date()))
             throw new Exception("The date is earlier than the current date.");
+        p_task.setStatus(DateTask.Status.Pendente);
         m_taskRepository.save(p_task);
         return "Task criada com Sucesso";
     }

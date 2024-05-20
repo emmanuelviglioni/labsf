@@ -1,7 +1,6 @@
 package com.ladesoft.roteiro01.service;
 
 import com.ladesoft.roteiro01.entity.DeadLineTask;
-
 import com.ladesoft.roteiro01.repository.DeadLineTaskRepository;
 import org.springframework.stereotype.Service;
 

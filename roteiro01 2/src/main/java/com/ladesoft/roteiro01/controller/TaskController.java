@@ -51,7 +51,7 @@ public class TaskController {
         }
     }
 
-    @PutMapping(value = {"/setTaskAsComplete","/setTaskAsPending",""})
+    @PutMapping(value = {"/editTask",""})
     @Operation(summary = "Muda o status da tarefa")
     public ResponseEntity<String> edit(@ModelAttribute Task task)
     {

@@ -32,10 +32,21 @@ This application allows users to create, edit, and list tasks. It uses Spring Bo
 
 ## API Endpoints
 
+### Task Endpoints
 - `GET /listAll` - List all tasks
 - `POST /create` - Create a new task
 - `PUT /setTaskAsComplete` - Set a task as complete
 - `PUT /setTaskAsPending` - Set a task as pending
+
+### DateTask Endpoints
+- `GET /dateTask` - List all date tasks
+- `POST /dateTask` - Create a new date task
+- `PUT /dateTask` - Update status of a date task
+
+### DeadLineTask Endpoints
+- `GET /deadLineTask` - List all deadline tasks
+- `POST /deadLineTask` - Create a new deadline task
+- `PUT /deadLineTask` - Update status of a deadline task
 
 ## Contributing
 

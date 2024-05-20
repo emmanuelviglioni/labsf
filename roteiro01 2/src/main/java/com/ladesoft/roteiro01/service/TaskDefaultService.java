@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
+import static com.ladesoft.roteiro01.entity.Task.Status.Pendente;
+
 public abstract class TaskDefaultService<Entity extends ITask, TypeId> {
     protected JpaRepository<Entity, TypeId> m_taskRepository;
 
@@ -13,6 +15,7 @@ public abstract class TaskDefaultService<Entity extends ITask, TypeId> {
         return m_taskRepository.findAll();
     }
     public String createTask(Entity p_task) throws Exception {
+        p_task.setStatus(Pendente);
         m_taskRepository.save(p_task);
         return "Task criada com Sucesso";
     }

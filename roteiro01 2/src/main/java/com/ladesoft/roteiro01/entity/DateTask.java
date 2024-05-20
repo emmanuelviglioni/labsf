@@ -1,8 +1,14 @@
 package com.ladesoft.roteiro01.entity;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -16,6 +22,7 @@ import java.util.Date;
 @PrimaryKeyJoinColumn(name = "date_task_Id")
 @Schema(description = "Informações da tarefa do tipo de data definida")
 public class DateTask extends Task{
+
 
     @Column(nullable = true)
     @DateTimeFormat(pattern = "yyyy-MM-dd")

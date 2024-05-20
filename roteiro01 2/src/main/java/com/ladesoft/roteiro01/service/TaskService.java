@@ -28,6 +28,8 @@ public class TaskService extends TaskDefaultService<Task, Integer> {
                 v_taskToModify.get().setTaskDesc(p_task.getTaskDesc());
             if(p_task.getTaskStatus() != null)
                 v_taskToModify.get().setTaskStatus(p_task.getTaskStatus());
+            if(p_task.getTaskPriority() != null)
+                v_taskToModify.get().setTaskPriority(p_task.getTaskPriority());
         }else
         {
             return null;
