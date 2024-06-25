@@ -16,7 +16,7 @@ export default function Priority(props: PriorityProps) {
         switch (props.priority.toLowerCase()) {
             case 'baixa':
                 return 'bg-primary-green border-[#A5C690]';
-            case 'media' || 'média':
+            case 'medium' || 'média':
                 return 'bg-primary-yellow border-[#C6BB90]';
             case 'alta':
                 return 'bg-primary-red border-[#C69090]';
